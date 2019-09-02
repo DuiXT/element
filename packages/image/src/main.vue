@@ -15,7 +15,7 @@
       :src="src"
       :style="imageStyle"
       :class="{ 'el-image__inner--center': alignCenter, 'el-image__preview': preview }">
-    <image-viewer :z-index="zIndex" v-if="preview && showViewer" :on-close="closeViewer" :url-list="previewSrcList"/>
+    <image-viewer :z-index="zIndex" :index="index" v-if="preview && showViewer" :on-close="closeViewer" :url-list="previewSrcList"/>
   </div>
 </template>
 
@@ -58,6 +58,10 @@
       zIndex: {
         type: Number,
         default: 2000
+      },
+      index:{
+        type: Number,
+        default: 0
       }
     },
 
