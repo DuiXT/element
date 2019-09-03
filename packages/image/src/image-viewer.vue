@@ -87,12 +87,15 @@ export default {
     onClose: {
       type: Function,
       default: () => {}
+    },
+    index: {
+      type: Number,
+      default: 0
     }
   },
 
   data() {
     return {
-      index: 0,
       isShow: false,
       infinite: true,
       loading: false,
